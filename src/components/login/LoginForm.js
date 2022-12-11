@@ -1,23 +1,29 @@
 import { Form, Button, Input} from "antd";
 
-const LoginForm = () => {
+import styles from "./login.module.css"
+
+const LoginForm = (props) => {
     const onFinish = (values) => {
         console.log(values)
+        //props.onFinish(true)
+
+        localStorage.setItem('isLoggedIn', true);
     }
-    return <div>
+    return <div className={styles.formContainer}>
          <Form
             name="basic"
             labelCol={{
-                span: 8,
+                span: 24,
             }}
             wrapperCol={{
-                span: 16,
+                span: 24,
             }}
             initialValues={{
                 remember: true,
             }}
             onFinish={onFinish}
             autoComplete="off"
+            layout="vertical"
         >
         <Form.Item
             label="Username"
