@@ -27,7 +27,6 @@ const LoginForm = (props) => {
         >
         <Form.Item
             label="Username"
-            name="username"
             rules={[
             {
                 required: true,
@@ -40,7 +39,6 @@ const LoginForm = (props) => {
 
         <Form.Item
             label="Password"
-            name="password"
             rules={[
             {
                 required: true,
@@ -52,7 +50,6 @@ const LoginForm = (props) => {
         </Form.Item>
 
         <Form.Item
-            name="remember"
             valuePropName="checked"
             wrapperCol={{
             offset: 8,
