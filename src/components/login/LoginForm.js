@@ -5,9 +5,9 @@ import styles from "./login.module.css"
 const LoginForm = (props) => {
     const onFinish = (values) => {
         console.log(values)
-        //props.onFinish(true)
+        props.onFinish(true)
 
-        localStorage.setItem('isLoggedIn', true);
+        //localStorage.setItem('isLoggedIn', true);
     }
     return <div className={styles.formContainer}>
          <Form
